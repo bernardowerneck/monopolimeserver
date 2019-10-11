@@ -4,7 +4,7 @@ public enum SquareType
 {
 	SITE,
 	CHANCE,
-	PRISION,
+	PRISON,
 	START, 
 	FREE_PASS
 }
