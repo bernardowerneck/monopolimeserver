@@ -15,9 +15,35 @@ import javax.persistence.Table;
 @DiscriminatorColumn(name="type", discriminatorType=DiscriminatorType.STRING)
 public abstract class Square 
 {
+	
+	//
+	// Atributos
+	//
 	@Id
 	@GeneratedValue
-	public Integer position;
+	private Integer position;
 	
-	public String description;
+	private String description;
+
+	//
+	// Métodos de acesso
+	// 
+	public Integer getPosition() {
+		return position;
+	}
+
+	public void setPosition(Integer position) {
+		this.position = position;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	public abstract SquareType getType();
+	
 }

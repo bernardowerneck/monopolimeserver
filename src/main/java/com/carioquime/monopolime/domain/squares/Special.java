@@ -6,15 +6,15 @@ import javax.persistence.Entity;
 import com.carioquime.monopolime.domain.Square;
 import com.carioquime.monopolime.domain.SquareType;
 
-
 @Entity
-@DiscriminatorValue(value="start")
-public class Start extends Square 
+@DiscriminatorValue(value="special")
+public class Special extends Square
 {
 
 	@Override
 	public SquareType getType() {
-		return SquareType.START;
-	}
 
+		return SquareType.SPECIAL;
+	}
+	
 }

@@ -6,5 +6,6 @@ public enum SquareType
 	CHANCE,
 	PRISION,
 	START, 
-	FREE_PASS
+	FREE_PASS,
+	SPECIAL
 }
