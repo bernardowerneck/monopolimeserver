@@ -1,5 +1,4 @@
 package com.carioquime.monopolime.logic;
 
-public class LogicClass {
-
+public class Dice {
 }
