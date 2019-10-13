@@ -2,13 +2,33 @@ package com.carioquime.monopolime.domain;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="game")
 public class Game 
 {
-	public List<Player> players;
+	//
+	// Atributos
+	//
+	@Id
+	@GeneratedValue
+	private Integer id;
 	
-	public List<GameSquare> board;
+	private Integer currentPlayer;
 	
-	public Integer currentPlayer;
+	private Integer totalPlayers;
+
+	//
+	// Relacionamentos
+	//
+	@OneToMany
+	private List<Player> players;
 	
-	public Integer totalPlayers;
+	@OneToMany
+	private List<GameSquare> board;
 }

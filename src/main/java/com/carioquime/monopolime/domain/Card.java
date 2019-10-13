@@ -1,10 +1,39 @@
 package com.carioquime.monopolime.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="card")
 public class Card 
 {
-	public String description;
+	//
+	// Atributos
+	//
+	@Id
+	@GeneratedValue
+	private Integer id;
 	
-	public Integer value;
+	private String description;
 	
-	public Boolean isLuck;
+	private Integer value;
+	
+	private Boolean isLuck;
+
+	//
+	// Métodos de acesso
+	//
+	public String getDescription() {
+		return description;
+	}
+
+	public Integer getValue() {
+		return value;
+	}
+
+	public Boolean getIsLuck() {
+		return isLuck;
+	}
 }

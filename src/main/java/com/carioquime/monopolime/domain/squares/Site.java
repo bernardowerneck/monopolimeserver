@@ -10,10 +10,21 @@ import com.carioquime.monopolime.domain.SquareType;
 @DiscriminatorValue(value="site")
 public class Site extends Square
 {
-	public Integer valor;
+	//
+	// Atributos
+	//
+	private Integer valor;
 
+	//
+	// Métodos de acesso
+	//
 	@Override
 	public SquareType getType() {
 		return SquareType.SITE;
 	}
+
+	public Integer getValor() {
+		return valor;
+	}
+	
 }

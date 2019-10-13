@@ -2,10 +2,10 @@ package com.carioquime.monopolime.domain;
 
 public enum SquareType 
 {
-	SITE,
 	CHANCE,
+	GO_TO_PRISION,
 	PRISION,
+	SITE,
 	START, 
-	FREE_PASS,
-	SPECIAL
+	FREE_PASS
 }

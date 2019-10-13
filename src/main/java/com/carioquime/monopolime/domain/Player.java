@@ -1,8 +1,12 @@
 package com.carioquime.monopolime.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,13 +21,10 @@ public class Player
 	
 	private Integer queue;
 	
+	@Enumerated(EnumType.STRING)
 	private Color color;
 	
 	private Integer money;
-	
-	private GameSquare currentSquare;
-	
-	private Game game;
 	
 	private Boolean isArrested;
 	
@@ -31,6 +32,15 @@ public class Player
 	
 	private Integer doubleDicesAmount;
 
+	//
+	// Relacionamentos
+	//
+	private GameSquare currentSquare;
+	
+	@ManyToOne
+	@JoinColumn(name="game_id")
+	private Game game;
+	
 	
 	//
 	// Métodos de acesso

@@ -7,14 +7,16 @@ import com.carioquime.monopolime.domain.Square;
 import com.carioquime.monopolime.domain.SquareType;
 
 @Entity
-@DiscriminatorValue(value="special")
-public class Special extends Square
+@DiscriminatorValue(value="go_to_prision")
+public class GoToPrision extends Square
 {
 
+	//
+	// Métodos de acesso
+	//
 	@Override
 	public SquareType getType() {
-
-		return SquareType.SPECIAL;
+		return SquareType.GO_TO_PRISION;
 	}
-	
+
 }

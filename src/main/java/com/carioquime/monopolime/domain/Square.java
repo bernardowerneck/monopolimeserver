@@ -32,18 +32,10 @@ public abstract class Square
 		return position;
 	}
 
-	public void setPosition(Integer position) {
-		this.position = position;
-	}
-
 	public String getDescription() {
 		return description;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
 	public abstract SquareType getType();
 	
 }
