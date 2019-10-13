@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 import com.carioquime.monopolime.domain.Square;
 import com.carioquime.monopolime.domain.squares.Chance;
 import com.carioquime.monopolime.domain.squares.FreePass;
-import com.carioquime.monopolime.domain.squares.Prision;
+import com.carioquime.monopolime.domain.squares.Prison;
 import com.carioquime.monopolime.domain.squares.Site;
 import com.carioquime.monopolime.domain.squares.Start;
 
@@ -29,7 +29,7 @@ public class MonopolimeApplication {
 		Square sqr4 = new FreePass();
 		sqr4.description="free pass";
 		
-		Square sqr5 = new Prision();
+		Square sqr5 = new Prison();
 		sqr5.description="prision";
 		
 		em.persist(sqr1);
